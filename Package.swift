@@ -10,11 +10,17 @@ let package = Package(
     products: [
         .library(
             name: "EmbeddedWalletSDK",
-            targets: ["EmbeddedWalletSDK", "FireblocksSDK", "MPCFBFramework"])
+            targets: ["EmbeddedWalletSDK"]),
+        .library(
+            name: "FireblocksSDK",
+            targets: ["FireblocksSDK"]),
+        .library(
+            name: "MPCFBFramework",
+            targets: ["MPCFBFramework"])
     ],
     dependencies: [
-        .package(url: "https://github.com/fireblocks/ncw-ios-sdk.git",
-                 .upToNextMajor(from: "2.9.1"))
+//        .package(url: "https://github.com/fireblocks/ncw-ios-sdk.git",
+//                 .upToNextMajor(from: "2.9.1"))
         ],
     targets: [
         .binaryTarget(name: "FireblocksSDK", url: "https://github.com/fireblocks/ncw-ios-sdk/releases/download/2.9.1/iOS-FireblocksSDK.zip", checksum: "60da20810898aa2c2d9c91fb4fe59a245b8f6887362ba8dd9a0f50f4f31431ab"),
