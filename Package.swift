@@ -10,24 +10,20 @@ let package = Package(
     products: [
         .library(
             name: "EmbeddedWalletSDK",
-            targets: ["EmbeddedWalletSDK"])
+            targets: ["EmbeddedWalletFramework"])
     ],
-//    dependencies: [
-//        .package(name: "FireblocksSDK",
-//                 url: "https://github.com/fireblocks/ncw-ios-sdk.git",
-//                 .upToNextMajor(from: "2.9.1"))
-//        ],
+    dependencies: [
+        .package(name: "FireblocksSDK",
+                 url: "https://github.com/fireblocks/ncw-ios-sdk.git",
+                 .upToNextMajor(from: "2.9.1"))
+        ],
     targets: [
-//        .target(
-//              name: "EmbeddedWalletSDKTarget",
-//              dependencies: [.target(name: "EmbeddedWalletFramework")]
-//            ),
-//        .target(name: "EmbeddedWalletFramework",
-//                dependencies: [
-//                    .target(name: "EmbeddedWalletSDK"),
-//                    .product(name: "FireblocksSDK", package: "FireblocksSDK")
-//                ]),
-        .binaryTarget(name: "EmbeddedWalletSDK", url: "https://github.com/fireblocks/ew-ios-sdk/releases/download/0.1.3/iOS-EmbeddedWalletSDK.zip", checksum: "9a3acc86d6d70da51b8624cf7289dc8748324950345563007b772727133b0d8b")
+        .target(name: "EmbeddedWalletFramework",
+                dependencies: [
+                    .target(name: "EmbeddedWalletSDK"),
+                    .product(name: "FireblocksSDK", package: "FireblocksSDK")
+                ]),
+        .binaryTarget(name: "EmbeddedWalletSDK", url: "https://github.com/fireblocks/ew-ios-sdk/releases/download/0.1.4/iOS-EmbeddedWalletSDK.zip", checksum: "9a3acc86d6d70da51b8624cf7289dc8748324950345563007b772727133b0d8b")
     ]
 
 )
