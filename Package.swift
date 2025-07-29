@@ -14,6 +14,6 @@ let package = Package(
     dependencies: [
     ],
     targets: [
-            .binaryTarget(name: "EmbeddedWalletSDK", url: "https://github.com/fireblocks/ew-ios-sdk/releases/download/1.0.8/iOS-EmbeddedWalletSDK.zip", checksum: "4d720f860be974bd581f1ee7417f93de585deb9dca72da0cef15517074ffdaad")
+            .binaryTarget(name: "EmbeddedWalletSDK", url: "https://github.com/fireblocks/ew-ios-sdk/releases/download/1.0.9/iOS-EmbeddedWalletSDK.zip", checksum: "5ba5e2e5b9efff49901fc0bf3896f5c48cd59566813782eeb0bc1d3e272eafba")
     ]
 )
